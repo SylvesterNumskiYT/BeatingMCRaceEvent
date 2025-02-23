@@ -1,0 +1,4 @@
+name: TrollMinecraftEvent
+version: '1.21.1'
+main: com.TrollMinecraftEvent.TrollMinecraftEvent
+api-version: '1.21'
