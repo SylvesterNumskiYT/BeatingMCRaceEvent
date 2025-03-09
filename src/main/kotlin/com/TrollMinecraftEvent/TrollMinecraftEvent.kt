@@ -10,22 +10,23 @@ class TrollMinecraftEvent : JavaPlugin() {
         lateinit var instance: TrollMinecraftEvent
     }
 
-
+    // Any code inside this section of code will run when the server starts the plugin.
     override fun onEnable() {
-        // Plugin startup logic
         logger.info("Plugin has loaded")
         instance = this
 
+        // This calls the function on line 22-25
         registerListeners()
     }
 
+    // This function registers the listener class files allowing them to run when the server starts.
     private fun registerListeners() {
         server.pluginManager.registerEvents(NoJumpingAllowed(), this)
         server.pluginManager.registerEvents(NoSprintingAllowed(), this)
     }
 
+    // Any code inside this section of code will run when the server starts to shut down.
     override fun onDisable() {
-        // Plugin shutdown logic
         logger.info("Plugin has unloaded")
     }
 }
