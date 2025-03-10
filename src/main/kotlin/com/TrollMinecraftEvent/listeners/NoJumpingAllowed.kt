@@ -48,14 +48,16 @@ class NoJumpingAllowed : Listener {
                 player.velocity = vel
             }, 1)
 
-            Thread.sleep(300)
             // If the player survived the fall, the server will manually kill them.
-            if (player.isOnGround) {
-                if (!player.isDead) {
-                    player.sendMessage("What?! You survived? Oh well. §4Time for plan B.")
-                    player.health = 0.0
-                } else player.sendMessage("I warned you.")
+            while (!player.isOnGround) {
+                if (player.isOnGround) {
+                    if (!player.isDead) {
+                        player.sendMessage("What?! You survived? Oh well. §4Time for plan B.")
+                        player.health = 0.0
+                    } else player.sendMessage("I warned you.")
+                }
             }
+
 
             jumpCount[player.uniqueId] = 0
             return
