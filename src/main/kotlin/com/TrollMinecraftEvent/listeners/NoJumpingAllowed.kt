@@ -48,6 +48,7 @@ class NoJumpingAllowed : Listener {
                 player.velocity = vel
             }, 1)
 
+            Thread.sleep(300)
             // If the player survived the fall, the server will manually kill them.
             if (player.isOnGround) {
                 if (!player.isDead) {
