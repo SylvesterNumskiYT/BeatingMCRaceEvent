@@ -6,12 +6,12 @@ import org.bukkit.event.player.PlayerToggleSprintEvent
 
 class NoSprintingAllowed : Listener {
 
+    // When the player attempts to run, the player's hunger is set to 3 bars.
     @EventHandler
     fun playerSprintEvent(event: PlayerToggleSprintEvent) {
         val player = event.player
         if (!player.isOp) {
-            event.isCancelled = true
-            player.isSprinting = false
+            player.foodLevel = 6
         }
     }
 }
