@@ -1,4 +1,5 @@
 # Beating MC Race Event | An Event hosted by me, SylvesterNumski
+## Please note this is still in development
 
 This is the GitHub with all the code of the plugin I'm currently developing for a minecraft event I'm working on. 
 
